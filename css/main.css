@@ -59,6 +59,19 @@ body {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 3s ease-in-out forwards; /* Duración de la animación de fade out */
+}
+
 .night {
   z-index: -1;
   position: absolute;

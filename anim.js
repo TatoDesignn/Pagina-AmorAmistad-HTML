@@ -14,21 +14,18 @@ var lyricsData = [
   { text: "Hasta a veces llorar", time: 65 },
   { text: "Mas sabes que te amo y quiero que recuerdes esto", time: 68 },
   { text: "Siempre te voy a querer", time: 77 },
-  { text: "I only want to live in clouds", time: 83 },
-  { text: "Where I'm now? I don't know why", time: 91 },
-  { text: "Nice butterflies in my hands", time: 97 },
-  { text: "Too much light for twilight", time: 104 },
-  { text: "In the mood for the flowers love", time: 108 },
-  { text: "At the time", time: 144 },
-  { text: "The whisper of birds", time: 148 },
-  { text: "Lonely before the sun cried", time: 153 },
-  { text: "Fell from the sky", time: 158 },
-  { text: "Like water drops", time: 164 },
-  { text: "Where I'm now? I don't know why", time: 169 },
-  { text: "Nice butterflies in my hands", time: 176 },
-  { text: "Too much light for twilight", time: 183 },
-  { text: "In the mood for the flowers", time: 188 },
-  { text: "Love.", time: 140 },
+  { text: "Me aseguraré de enamorarte cada día", time: 82 },
+  { text: "Aun con mis defectos, aún con mis locuras", time: 87 },
+  { text: "Y mis tonterías", time: 93 },
+  { text: "Siempre te voy a querer", time: 99 },
+  { text: "Te voy a cuidar por el resto de mi vida", time: 104 },
+  { text: "Hasta que la muerte, un día nos separe", time: 110 },
+  { text: "Yo voy a ser tuyo", time: 115 },
+  { text: "y tú mía", time: 120 },
+  { text: "Y es cierto a lo mejor y no todo es perfecto pero", time: 151 },
+  { text: "Pero se soluciona con besos", time: 157 },
+  { text: "Igual te hago enojar, Hasta a veces llorar", time: 163 },
+  { text: "Mas sabes que te amo y quiero que recuerdes esto...", time: 168 },
 ];
 
 // Animar las letras
@@ -59,12 +56,15 @@ setInterval(updateLyrics, 1000);
 // Función para ocultar el título después de 216 segundos
 function ocultarTitulo() {
   var titulo = document.querySelector(".titulo");
-  titulo.style.animation =
-    "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
+  
+  // Añade la clase de animación
+  titulo.classList.add("fadeOut"); 
+
+  // Espera que termine la animación antes de ocultar el elemento
   setTimeout(function () {
-    titulo.style.display = "none";
-  }, 3000); // Espera 3 segundos antes de ocultar completamente
+    titulo.style.display = "none"; // Oculta el elemento
+  }, 5000); // Coincide con la duración de la animación
 }
 
-// Llama a la función después de 216 segundos (216,000 milisegundos)
-setTimeout(ocultarTitulo, 216000);
+// Llama a la función después de 10 segundos (216,000 milisegundos)
+setTimeout(ocultarTitulo, 10000);

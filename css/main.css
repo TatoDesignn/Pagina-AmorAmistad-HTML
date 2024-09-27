@@ -72,6 +72,47 @@ body {
   animation: fadeOut 3s ease-in-out forwards; /* Duración de la animación de fade out */
 }
 
+.carousel-container {
+  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+  width: 100vw; /* El contenedor ocupa todo el ancho de la pantalla */
+  height: 400px; /* Altura ligeramente mayor que la de las imágenes */
+  position:fixed;
+  margin-bottom: 350px;
+}
+
+.carousel {
+  display: flex;
+  position: relative; /* Permite que las imágenes se desplacen dentro del contenedor */
+  animation: slide 260s linear infinite; /* Animación continua y más larga para controlar el tiempo */
+}
+
+.carousel img {
+  max-width: 200px; /* Tamaño fijo de las imágenes */
+  height: auto; /* Tamaño fijo de las imágenes */
+  border: 2px solid black;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 250px;
+  background-color: white;
+  height: 300px;
+  margin-right: 150px;
+  border: 1.5px solid black;
+  box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-2100vw); /* Comienza fuera de la pantalla a la izquierda */
+   }
+  100% {
+    transform: translateX(calc(200px + 100vw)); /* Se desplaza hasta salir por el borde derecho */
+  }
+}
+
 .night {
   z-index: -1;
   position: absolute;

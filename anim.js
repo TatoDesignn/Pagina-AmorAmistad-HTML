@@ -2,6 +2,15 @@
 var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
+const carousel = document.getElementById('carousel'); // Cambiado a getElementById
+    
+for (let i = 1; i <= 97; i++) {
+    const div = document.createElement('div');
+    div.classList.add('fotos');
+    div.innerHTML = `<img src="img/imagen${i}.jpg" alt="Imagen ${i}">`;
+    carousel.appendChild(div);
+}
+
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
   { text: "Me han preguntado que si tú eres mi verdadero amor, y yo", time: 28 },
